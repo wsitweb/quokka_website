@@ -142,7 +142,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
 .header{
     width: 100%;
-    min-height: 134px;
+    max-height: 134px;
     background: #9DC3D9;
     border-radius: 0 0 100px 100px;
     position: fixed;
@@ -380,23 +380,29 @@ body{
 .education__cards{
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: space-around;
 	padding: 0 100px;
 	margin: 0 -78px;
 	
 }
 .education__card{
-	width: 412px;
-	padding: 8px 30px;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	padding: 8px 60px;
 	background: #F2F8FF;
 	box-shadow: 1px 1px 8px #417896;
 	border-radius: 15px;
-	margin: 78px;
-	padding: -78px;
+	align-items: center;
+}
+.education__card-wrap{
+	justify-content: center;
+	margin: 30px;
+	max-width: 412px;
+	width: 100%;
 }
 .education__cards-ico{
 	display: block;
-	margin: 0 auto;
 	margin-top: -50px;
 	margin-bottom: 29px;
 }
@@ -416,7 +422,6 @@ body{
 .education__cards-link{
 	display: block;
 	max-width: 200px;
-	margin: 0 auto;
 	text-align: center;
 	background: #FEBD3D;
 	border-radius: 35px;
@@ -430,6 +435,9 @@ body{
 	letter-spacing: 0.05em;
 	transition: transform 1s;
 	color: #FFFFFF;
+}
+.education__cards-text{
+	flex: 1 1 auto;
 }
 .education__cards-link:hover, .education__cards-link:focus, .education__cards-link:active{
 	transform: scale(1.05, 1.05);
@@ -464,12 +472,14 @@ body{
 .book__buttons{
 	display: flex;
 	flex-wrap: nowrap;
-	justify-content: space-between;
+	flex-wrap: wrap;
+	justify-content: space-around;
 	max-width: 436px;
 	margin: 0 auto;
 	margin-bottom: 60px;
 }
 .book__button{
+	margin: 10px;
 	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 700;
@@ -487,6 +497,12 @@ body{
 	width: 200px;
 	height: 70px;
 	transition: transform 1s;
+}
+.book__button:last-child{
+	margin-right: 0;
+}
+.book__button:first-child{
+	margin-left: 0;
 }
 .book__button:hover, .book__button:focus, .book__button:active{
 	transform: scale(1.05, 1.05);
@@ -514,6 +530,7 @@ body{
 	text-transform: uppercase;
 	text-align: center;
 	margin-bottom: 25px;
+	line-height: 100%;
 }
 .reviews__subtitle{
 	font-family: 'Montserrat';
@@ -550,9 +567,7 @@ body{
 	position: relative;
 	
 }
-.reviews__card:last-child{
-	margin: 0;
-}
+
 .reviews__card-active{
 	z-index: 1;
 	box-shadow: 1px 1px 8px #417896;
@@ -599,6 +614,7 @@ body{
 	width: 28px;
 	height: 13px;
 	margin: -3% 0 0 -10%;
+	transform: translate(-50%, -50%);
 }
 .reviews__card-subtitle::after{
 	content: "";
@@ -611,7 +627,7 @@ body{
 	width: 28px;
 	height: 13px;
 	margin: 0 -10% -3% 0;
-	/* margin: -3% 0 0 -10%; */
+	transform: translate(50%, 50%);
 }
 
 .reviews__card-img{
@@ -656,11 +672,13 @@ body{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	margin: 0 -10px 37.5px;
 }
 .teacher__card-wrap{
-	padding: 35px 10px;
+	margin: 35px 10px;
+	max-width: 280px;
+	width: 100%;
 }
+
 .teacher__card{
 	display: flex;
 	flex-direction: column;
@@ -669,7 +687,6 @@ body{
 	background: #F2F8FF;
 	box-shadow: 1px 1px 8px #417896;
 	border-radius: 10px;
-	width: 280px;
 	height: 175px;
 	transition: transform 1.20s;
 	
@@ -744,7 +761,18 @@ body{
 	justify-content: space-around;
 	margin: 0 -8px;
 }
-
+.team__card-wrap{
+	max-width: 380px;
+	width: 100%;
+	margin: 0 10px 60px;
+	padding: 0 6px;
+}
+.team__card-wrap:last-child{
+	margin-right: 0;
+}
+.team__card-wrap:first-child{
+	margin-left: 0;
+}
 .team__card{
 	display: flex;
 	flex-direction: column;
@@ -752,11 +780,10 @@ body{
 	background: #F2F8FF;
 	box-shadow: 1px 1px 8px #417896;
 	border-radius: 10px;
-	width: 380px;
-	height: 290px;
+	min-height: 290px;
 	transition: transform 1.20s;
-	margin: 0 8px 60px;
-	
+	padding: 0 16px;
+	flex: 1 1 auto;
 }
 .team__card:hover, .team__card:active, .team__card:focus{
 	z-index: 2;
@@ -786,7 +813,8 @@ body{
 	margin-bottom: 16px;
 }
 .team__card-subtitle{
-	width: 300px;
+	max-width: 300px;
+	width: 100%;
 	margin-bottom: 16px;
 }
 .team__card-gender{
@@ -834,7 +862,7 @@ body{
 		flex-direction: column;
 	}
 	.reviews__card{
-		margin: 0 0 50px;
+		margin: 30px 10px;
 		transform: none;
 	}
 	.footer{
@@ -848,12 +876,21 @@ body{
 		padding-bottom: 10px;
 	}
 	.book__buttons{
-		margin-bottom: 0;
+		margin-bottom: 30px;
 	}
 	.header{
 		border-radius: 0;
 	}
 	
+	
+}
+@media (min-width: 1180px){
+	.teacher__card-wrap:last-child{
+		margin-right: 0;
+	}
+	.teacher__card-wrap:first-child{
+		margin-left: 0;
+	}
 }
 @media (max-width: 872px){
 	.header__nav{
@@ -863,7 +900,7 @@ body{
 		width: 100%;
 		height: 100%;
 		transform: translate(100%, 0);
-		background: #182629de;
+		background: #f2f8ffe3;
 		backdrop-filter: blur(5px);
 		padding: 100px 30px 30px 30px;
 		transition: transform 0.3s ease 0s;
@@ -881,11 +918,12 @@ body{
 		width: 100vw;
 		height: 100vh;
 		background: url(../img/description__img.png)50% 50%/160% no-repeat;
-		opacity: 0.5;
+		opacity: 0.1;
 		filter: blur(3px);
 	}
 	.header__nav a{
-		color: #F2F8FF;
+		color: #464545;
+		font-weight: 700;
 		font-size: 30px;
 	}
 	.header__list{
@@ -939,11 +977,19 @@ body{
 	
 	.menu__icon._active::before{
 		top: 50%;
+		background-color: rgb(0, 0, 0);
 		transform: rotate(-45deg) translate(0px, -50%);
 	}
 	.menu__icon._active::after{
+		background-color: rgb(0, 0, 0);
 		bottom: 50%;
 		transform: rotate(45deg) translate(0px, 50%);
+	}
+	.header__wrapper{
+		padding: 10px 0;
+	}
+	.main{
+		margin-top: 100px;
 	}
 }
 @media (max-width: 767px){
@@ -966,6 +1012,110 @@ body{
 	.header__wrapper{
 		padding-right: 6%;
 		padding-left: 3%;
+	}
+	.intro__section {
+		justify-content: center;
+	}
+	.intro__blok{
+		justify-content: center;
+		background: #f2f8ffe3;
+		border-radius: 30px;
+		backdrop-filter: blur(3px);
+		width: 90%;
+	}
+	.intro__link{
+		margin: 0 auto;
+	}
+	.intro__title{
+		font-size: 30px;
+		text-align: center;
+		max-width: 350px;
+		margin: 0 auto;
+		line-height: 100%;
+	}
+	.intro__subtitle{
+		text-align: center;
+		max-width: 350px;
+		margin: 30px auto;
+	}
+	.intro{
+		margin-bottom: 50px;
+	}
+	.description__title-text{
+		font-size: 20px;
+	}
+	.description__title{
+		margin: 0 0 20px 0;
+		justify-content: center;
+	}
+	.description__bloks{
+		padding: 10px;
+	}
+	.description__blok{
+		padding: 40px 30px;
+	}
+	.description__subtitle{
+		text-align: center;
+		font-size: 14px;
+		line-height: 100%;
+	}
+	.description__p{
+		margin: 0 0 10px 0;
+		font-size: 12px;
+		line-height: 100%;
+	}
+	.education__title{
+		font-size: 20px;
+		line-height: 100%;
+	}
+	.education__subtitle{
+		max-width: 450px;
+		font-size: 14px;
+		margin-bottom: 30px;
+		line-height: 100%;
+	}
+	.education__cards-subtitle{
+		margin: 0 0 16px;
+		line-height: 100%;
+	}
+	.education__card{
+		padding: 8px 20px;
+	}
+	.education__card-wrap{
+		margin: 30px 0;
+	}
+	.education__cards-link{
+		margin-bottom: 15px;
+	}
+	.book__subtitle{
+		font-size: 14px;
+		margin: 0;
+		line-height: 100%;
+	}
+	.book__img{
+		margin: 0 0 16px 0;
+	}
+	.reviews__subtitle{
+		margin: 0 0 30px 0;
+		line-height: 100%;
+	}
+	.reviews{
+		margin-bottom: 30px;
+	}
+	.team__subtitle{
+		line-height: 100%;
+	}
+	.book__button:last-child, .book__button:first-child, .book__button{
+		margin: 10px 10px 10px 10px;
+	}
+	.team__card-wrap:last-child{
+		margin-right: 10px;
+	}
+	.team__card-wrap:first-child{
+		margin-left: 10px;
+	}
+	.education__card-title{
+		font-size: 20px;
 	}
 }
 * {
