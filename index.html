@@ -7,28 +7,32 @@
     <title>Quokka English</title>
     <link rel="shortcut icon" href="./img/svg/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    
+    <script src="./js/main.js" defer></script>    
 </head>
 <body>
     <header class="header">
         <div class="wrapper">
             <div class="header__wrapper">
                 <div class="header__logo">
-                    <a href="#" class="header__logo-link">
-                        <img src="./img/svg/logo.svg" alt="Quokka English" class="header__logo-pic">
+                    <a href="index.html" class="header__logo-link">
+                        <img src="./img/svg/logo.svg" alt="Quokka Logo" class="header__logo-pic">
                     </a></div>
-                <nav class="header__nav">
-                    <ul class="header__list">
-                        <li class="heaer__item active">О нас</li>
-                        <li class="heaer__item ">Вопросы</li>
-                        <li class="heaer__item">Контакты</li>
-                    </ul>
-                </nav>
+                <div class="header__menu">
+                    <div class="menu__icon">
+                        <span></span>
+                    </div>
+                    <nav class="header__nav">
+                        <ul class="header__list">
+                            <li class="heaer__item active"><a href="#">О нас</a></li>
+                            <li class="heaer__item "><a href="#">Вопросы</a></li>
+                            <li class="heaer__item"><a href="#">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </div>
                 <div class="header__login">
                     <a href="#" class="header__login-link">
                     <span class="header__login-text">Вход / Регистрация</span>
-                    <img src="./img/reg-ico.png" alt="Вход / Регистрация" class="header__login-img">
+                    <img src="./img/reg-ico.png" alt="Login / Registration" class="header__login-img">
                     </a>
                 </div>
             </div>
@@ -44,7 +48,7 @@
                     <a href="#" class="intro__link">Обучение</a>
                 </div>
                 <div class="intro__section-image">
-                <img src="./img/intro-blok-img.png" alt="" class="intro__blok-img">
+                <img src="./img/intro-blok-img.png" alt="Quokka English" class="intro__blok-img">
                 </div>
             </section>
         </div>
@@ -57,9 +61,12 @@
                     <h2 class="description__title-text">Давай познакомимся со школой</h2>
                 </div>
                 <div class="description__bloks">
+                    <div class="description__bloks-img">
+                        <img class="description__blok-image" src="./img/description__img.png" alt="get to know the school">
+                    </div>
                     <div class="description__blok">
                         <h3 class="description__subtitle">Наша школа, это волонтерский проект, помогающий людям выучить английский.</h3>
-                        <p class="description__p"> На этой платформе вы найдете видео уроки и бонусы по грамматике и лексике. Видео выстроены в логическом порядке, так что вы не потеряетесь.</p>
+                        <p class="description__p">На этой платформе вы найдете видео уроки и бонусы по грамматике и лексике. Видео выстроены в логическом порядке, так что вы не потеряетесь.</p>
                         <p class="description__p">К каждому уроку есть упражнения, выполняя которые, вы сможете развивать все навыки: грамматику, чтение, слух, письмо и даже говорение!</p>
                         <p class="description__p">Если вам хочется более детальных разборов уроков, тогда для вас отлично подойдут наши учебники. Мы с семьей разберем сложные темы простым языком на примерах из нашей жизни.</p>
                         <p class="description__p">На нашей платформе работают учителя на любой вкус: дружелюбные или строгие, кому по душе традиционное обучение. </p>
@@ -77,8 +84,9 @@
                 <p class="education__subtitle">Quokka English School предоставляет нашим ученикам такую программу,
                     которая будет им удобна</p>
                 <div class="education__cards">
+                    <div class="education__card-wrap">
                     <div class="education__card">
-                        <img src="./img/paws.png" alt="paws" class="education__cards-ico">
+                        <img src="./img/paws.png" alt="teaching" class="education__cards-ico">
                         <h3 class="education__card-title">Бесплатно</h3>
                         <p class="education__cards-subtitle">+ Уроки и Бонусы</p>
                         <p class="education__cards-subtitle">+ Базовые упражнения </p>
@@ -87,8 +95,10 @@
                         <p class="education__cards-subtitle">+ Базовые игры</p>
                         <a href="#" class="education__cards-link">Выбрать</a>
                     </div>
+                    </div>
+                    <div class="education__card-wrap">
                     <div class="education__card">
-                        <img src="./img/paws-two.png" alt="paws-two" class="education__cards-ico">
+                        <img src="./img/paws-two.png" alt="teaching" class="education__cards-ico">
                         <h3 class="education__card-title">По подписке</h3>
                         <p class="education__cards-subtitle">+ Уроки и Бонусы</p>
                         <p class="education__cards-subtitle">+ Базовые упражнения + бонусные</p>
@@ -96,6 +106,7 @@
                         <p class="education__cards-subtitle">+ Базовые тексты + бонусные</p>
                         <p class="education__cards-subtitle">+ Базовые игры + бонусные</p>
                         <a href="#" class="education__cards-link">Выбрать</a>
+                    </div>
                     </div>
                 </div>
             </section>
@@ -116,22 +127,28 @@
                         Отзывы наших клиентов очень важны, и квока с радостью будет их читать</p>
                     <div class="reviews__cards">
                         <div class="reviews__card">
-                            <img src="./img/svg/reviews__card-img-02.svg" alt="" class="reviews__card-img">
+                            <img src="./img/svg/reviews__card-img-02.svg" alt="avatar" class="reviews__card-img">
                             <h3 class="reviews__card-title">Влад, 17 лет</h3>
+                            <div class="reviews__card-textwrap">
                             <p class="reviews__card-subtitle">Я учусь в школе Квокки уже целый год, и за это время я подняла свой уровень английского с А2 до В1. Теперь я могу заводить иностранных друзей и свободно с ними общаться. Спасибо школе!</p>
-                            <img src="./img/card-gender-male.png" alt="" class="reviews__card-gender">
+                            </div>
+                            <img src="./img/card-gender-male.png" alt="gender" class="reviews__card-gender">
                         </div>
                         <div class="reviews__card reviews__card-active">
-                            <img src="./img/svg/reviews__card-img-01.svg" alt="" class="reviews__card-img">
+                            <img src="./img/svg/reviews__card-img-01.svg" alt="avatar" class="reviews__card-img">
                             <h3 class="reviews__card-title">Анна, 18 лет</h3>
+                            <div class="reviews__card-textwrap">
                             <p class="reviews__card-subtitle">Я учусь в школе Квокки уже целый год, и за это время я подняла свой уровень английского с А2 до В1. Теперь я могу заводить иностранных друзей и свободно с ними общаться. Спасибо школе!</p>
-                            <img src="./img/card-gender-female.png" alt="" class="reviews__card-gender">
+                            </div>
+                            <img src="./img/card-gender-female.png" alt="gender" class="reviews__card-gender">
                         </div>
                         <div class="reviews__card">
-                            <img src="./img/svg/reviews__card-img-03.svg" alt="" class="reviews__card-img">
+                            <img src="./img/svg/reviews__card-img-03.svg" alt="avatar" class="reviews__card-img">
                             <h3 class="reviews__card-title">Даша, 19 лет</h3>
+                            <div class="reviews__card-textwrap">
                             <p class="reviews__card-subtitle">Я учусь в школе Квокки уже целый год, и за это время я подняла свой уровень английского с А2 до В1. Теперь я могу заводить иностранных друзей и свободно с ними общаться. Спасибо школе!</p>
-                            <img src="./img/card-gender-female.png" alt="" class="reviews__card-gender">
+                            </div>
+                            <img src="./img/card-gender-female.png" alt="gender" class="reviews__card-gender">
                         </div>
                     </div>
                 </div>
@@ -141,25 +158,33 @@
                     <h2 class="teacher__title">Кто будет тебя учить</h2>
                     <p class="teacher__subtitle">В Quokka English School ты можешь выбрать преподавателя по вкусу. Дружелюбный или строгий, решать тебе</p>
                     <div class="teacher__cards">
+                        <div class="teacher__card-wrap">
                         <div class="teacher__card">
-                            <img src="./img/svg/teacher__avatar01.svg" alt="" class="teacher__avatar">
+                            <img src="./img/svg/teacher__avatar01.svg" alt="avatar" class="teacher__avatar">
                             <h2 class="teacher__description">Тот самый строгий</h2>
-                            <img src="./img/teacher-gender02.png" alt="" class="teacher__gender">
+                            <img src="./img/teacher-gender02.png" alt="gender" class="teacher__gender">
                         </div>
+                        </div>
+                        <div class="teacher__card-wrap">
                         <div class="teacher__card">
-                            <img src="./img/svg/teacher__avatar02.svg" alt="" class="teacher__avatar">
+                            <img src="./img/svg/teacher__avatar02.svg" alt="avatar" class="teacher__avatar">
                             <h2 class="teacher__description">Учитель Друг</h2>
-                            <img src="./img/teacher-gender01.png" alt="" class="teacher__gender">
+                            <img src="./img/teacher-gender01.png" alt="gender" class="teacher__gender">
                         </div>
+                        </div>
+                        <div class="teacher__card-wrap">
                         <div class="teacher__card">
-                            <img src="./img/svg/teacher__avatar01.svg" alt="" class="teacher__avatar">
+                            <img src="./img/svg/teacher__avatar01.svg" alt="avatar" class="teacher__avatar">
                             <h2 class="teacher__description">Главная звезда</h2>
-                            <img src="./img/teacher-gender02.png" alt="" class="teacher__gender">
+                            <img src="./img/teacher-gender02.png" alt="gender" class="teacher__gender">
                         </div>
+                        </div>
+                        <div class="teacher__card-wrap">
                         <div class="teacher__card">
-                            <img src="./img/svg/teacher__avatar02.svg" alt="" class="teacher__avatar">
+                            <img src="./img/svg/teacher__avatar02.svg" alt="avatar" class="teacher__avatar">
                             <h2 class="teacher__description">Носитель языка</h2>
-                            <img src="./img/teacher-gender01.png" alt="" class="teacher__gender">
+                            <img src="./img/teacher-gender01.png" alt="gender" class="teacher__gender">
+                        </div>
                         </div>
                         
                     </div>
@@ -172,46 +197,46 @@
                     <p class="team__subtitle">Здесь те кто сделал Quokka English School удобным для Вас.</p>
                     <div class="team__cards">
                         <div class="team__card">
-                            <img src="./img/svg/teacher__avatar01.svg" alt="" class="team__card-avatar">
+                            <img src="./img/svg/teacher__avatar01.svg" alt="avatar" class="team__card-avatar">
                             <h3 class="team__card-title">Алина, 20 лет</h3>
                             <div class="team__card-subtitle">
                             <p class="team__card-text">Графический дизайнер</p>
                             <p class="team__card-text">Inst: -----</p>
                             <p class="team__card-text">telegram: -----</p>
                             </div>
-                            <img src="./img/card-gender-female.png" alt="" class="team__card-gender">
+                            <img src="./img/card-gender-female.png" alt="gender" class="team__card-gender">
                         </div>
                         <div class="team__card">
-                            <img src="./img/svg/teacher__avatar02.svg" alt="" class="team__card-avatar">
+                            <img src="./img/svg/teacher__avatar02.svg" alt="avatar" class="team__card-avatar">
                             <h3 class="team__card-title">Дима, 20 лет</h3>
                             <div class="team__card-subtitle">
                             <p class="team__card-text">Web-дизайнер</p>
                             <p class="team__card-text">Inst: -----</p>
                             <p class="team__card-text">telegram: -----</p>
                             </div>
-                            <img src="./img/card-gender-male.png" alt="" class="team__card-gender">
+                            <img src="./img/card-gender-male.png" alt="gender" class="team__card-gender">
                         </div>
                         <div class="team__card">
-                            <img src="./img/svg/teacher__avatar01.svg" alt="" class="team__card-avatar">
+                            <img src="./img/svg/teacher__avatar01.svg" alt="avatar" class="team__card-avatar">
                             <h3 class="team__card-title">Рома, 20 лет</h3>
                             <div class="team__card-subtitle">
                             <p class="team__card-text">Frontend Developer</p>
                             <p class="team__card-text">Inst: -----</p>
                             <p class="team__card-text">telegram: -----</p>
                             </div>
-                            <img src="./img/card-gender-female.png" alt="" class="team__card-gender">
+                            <img src="./img/card-gender-female.png" alt="gender" class="team__card-gender">
                         </div>
                     </div>
                 </div>
             </section>
 <footer class="footer wrapper">
-    <img src="./img/svg/logo-footer.svg" alt="" class="footer__ligo">
+    <img class="footer__lmg-logo" src="./img/svg/logo-footer.svg" alt="Logo" class="footer__ligo">
     <p class="footer__text"> © Все права защищены. 2022 год.</p>
     <div class="footer__social-blok">
-        <a href="#" class="footer__social-link"><img src="./img/svg/YoutubeOutlined.svg" alt="" class="footer__social-pic"></a>
-        <a href="#" class="footer__social-link"><img src="./img/svg/TikTok.svg" alt="" class="footer__social-pic"></a>
-        <a href="#" class="footer__social-link"><img src="./img/svg/Telegram.svg" alt="" class="footer__social-pic"></a>
-        <a href="#" class="footer__social-link"><img src="./img/svg/InstagramOutlined.svg" alt="" class="footer__social-pic"></a>
+        <a href="#" class="footer__social-link"><img src="./img/svg/YoutubeOutlined.svg" alt="social" class="footer__social-pic"></a>
+        <a href="#" class="footer__social-link"><img src="./img/svg/TikTok.svg" alt="social" class="footer__social-pic"></a>
+        <a href="#" class="footer__social-link"><img src="./img/svg/Telegram.svg" alt="social" class="footer__social-pic"></a>
+        <a href="#" class="footer__social-link"><img src="./img/svg/InstagramOutlined.svg" alt="social" class="footer__social-pic"></a>
     </div>
 </footer>
 <script src="./js/main.js"></script>
