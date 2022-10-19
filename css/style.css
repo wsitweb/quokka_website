@@ -1042,7 +1042,7 @@ body{
 		margin-bottom: 50px;
 	}
 	.description__title-text{
-		font-size: 20px;
+		line-height: 100%;
 	}
 	.description__title{
 		margin: 0 0 20px 0;
@@ -1053,19 +1053,20 @@ body{
 	}
 	.description__blok{
 		padding: 40px 30px;
+		background: #f2f8fff0;
+		backdrop-filter: blur(3px);;
 	}
 	.description__subtitle{
 		text-align: center;
-		font-size: 14px;
+		font-size: 20px;
 		line-height: 100%;
 	}
 	.description__p{
 		margin: 0 0 10px 0;
-		font-size: 12px;
+		font-size: 16px;
 		line-height: 100%;
 	}
 	.education__title{
-		font-size: 20px;
 		line-height: 100%;
 	}
 	.education__subtitle{
