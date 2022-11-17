@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quokka English</title>
-    <link rel="shortcut icon" href="./img/svg/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/main.js" defer></script>    
+    <script src="./js/main.js" defer></script>
 </head>
 <body>
     <header class="header">
@@ -124,11 +124,15 @@
                         <img src="./img/book__img.png" alt="Quokka Book" class="book__img">
                     </div>
             </section>
-            <section class="reviews wrapper">
+            <section class="reviews">
                 <div class="reviews__wrapper">
                     <h2 class="reviews__title">Что говорят ученики</h2>
                     <p class="reviews__subtitle">Здесь будут отзывы наших учеников, родителей и участников бесплатного обучения.
                         Отзывы наших клиентов очень важны, и квока с радостью будет их читать</p>
+                        <div class="reviews__cards-buttons">
+                            <button class="button" id="button"></button>
+                            <button class="button" id="button"></button>
+                        </div>
                     <div class="reviews__cards">
                         <div class="reviews__card">
                             <img src="./img/svg/reviews__card-img-02.svg" alt="avatar" class="reviews__card-img">
@@ -138,7 +142,7 @@
                             </div>
                             <img src="./img/card-gender-male.png" alt="gender" class="reviews__card-gender">
                         </div>
-                        <div class="reviews__card reviews__card-active">
+                        <div class="reviews__card">
                             <img src="./img/svg/reviews__card-img-01.svg" alt="avatar" class="reviews__card-img">
                             <h3 class="reviews__card-title">Анна, 18 лет</h3>
                             <div class="reviews__card-textwrap">
@@ -154,14 +158,18 @@
                             </div>
                             <img src="./img/card-gender-female.png" alt="gender" class="reviews__card-gender">
                         </div>
+                        
                     </div>
                 </div>
             </section>
             <section class="teacher wrapper">
+            <form>
                 <div class="teacher__wrapper">
                     <h2 class="teacher__title">Кто будет тебя учить</h2>
                     <p class="teacher__subtitle">В Quokka English School ты можешь выбрать преподавателя по вкусу. Дружелюбный или строгий, решать тебе</p>
                     <div class="teacher__cards">
+                        <input type="radio" id="teacher01" name="teacher" value="teacher01">
+                        <label for="teacher01">
                         <div class="teacher__card-wrap">
                         <div class="teacher__card">
                             <img src="./img/svg/teacher__avatar01.svg" alt="avatar" class="teacher__avatar">
@@ -169,6 +177,9 @@
                             <img src="./img/teacher-gender02.png" alt="gender" class="teacher__gender">
                         </div>
                         </div>
+                        </label>
+                        <input type="radio" id="teacher02" name="teacher" value="teacher02">
+                        <label for="teacher02">
                         <div class="teacher__card-wrap">
                         <div class="teacher__card">
                             <img src="./img/svg/teacher__avatar02.svg" alt="avatar" class="teacher__avatar">
@@ -176,6 +187,9 @@
                             <img src="./img/teacher-gender01.png" alt="gender" class="teacher__gender">
                         </div>
                         </div>
+                        </label>
+                        <input type="radio" id="teacher03" name="teacher" value="teacher03">
+                        <label for="teacher03">
                         <div class="teacher__card-wrap">
                         <div class="teacher__card">
                             <img src="./img/svg/teacher__avatar01.svg" alt="avatar" class="teacher__avatar">
@@ -183,6 +197,9 @@
                             <img src="./img/teacher-gender02.png" alt="gender" class="teacher__gender">
                         </div>
                         </div>
+                        </label>
+                        <input type="radio" id="teacher04" name="teacher" value="teacher04">
+                        <label for="teacher04">
                         <div class="teacher__card-wrap">
                         <div class="teacher__card">
                             <img src="./img/svg/teacher__avatar02.svg" alt="avatar" class="teacher__avatar">
@@ -190,10 +207,11 @@
                             <img src="./img/teacher-gender01.png" alt="gender" class="teacher__gender">
                         </div>
                         </div>
-                        
+                        </label>
                     </div>
                     <button type="submit" class="teacher__button">Выбрать</button>
                 </div>
+            </form>
             </section>
             <section class="team wrapper">
                 <div class="team__wrapper">
@@ -233,12 +251,13 @@
                             <p class="team__card-text">Inst: -----</p>
                             <p class="team__card-text">telegram: -----</p>
                             </div>
-                            <img src="./img/card-gender-female.png" alt="gender" class="team__card-gender">
+                            <img src="./img/card-gender-male.png" alt="gender" class="team__card-gender">
                         </div>
                         </div>
                     </div>
                 </div>
             </section>
+            <div class="footer-wrap">
 <footer class="footer wrapper">
     <img class="footer__lmg-logo" src="./img/svg/logo-footer.svg" alt="Logo" class="footer__ligo">
     <p class="footer__text"> © Все права защищены. 2022 год.</p>
@@ -249,6 +268,7 @@
         <a href="#" class="footer__social-link"><img src="./img/svg/InstagramOutlined.svg" alt="social" class="footer__social-pic"></a>
     </div>
 </footer>
+</div>
 <script src="./js/main.js"></script>
 </main>
 </body>
